@@ -228,6 +228,44 @@ $(document).ready(function() {
 
 	dragDropEx();
 
+		var dragDropTextEx = function() {
+		var arrayDrag = [];
+		var arrayDrop = [];
+		var indexArr = [];
+		var rand, index;
+		var array;
+		var index = Math.floor(Math.random() * dragDropText.length) + 0;
+		var dragDropArr = dragDropText[index];
+console.log(dragDropText);
+		$('#drag-drop_text').html('');
+		$('.fill-gaps .drag-drop_text-buttons').html('');
+
+
+		arrayDrag = dragDropArr.map((item, index) =>(
+			`<span class="text">
+				<span>${item.first}</span>
+				<span class="drop" id="drop${index+600}" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="${index+600}"></span>
+				<span>${item.last}</span>
+			</span>`
+		)).join('');
+
+		arrayDrop = dragDropArr.map((item, index) =>(
+			`<button class="drag" id="drag${index+600}"  draggable="true" data-id="${index+600}"
+					ondragstart="drag(event)">${item.drop}</button>`
+		));
+		arrayDrop.sort();
+		var arrayDropR = arrayDrop.map((item, index) =>(item)).join('');
+		$('#drag-drop_text').append(`<div class='answers'>${arrayDrag}</div>`);
+		$('.drag-drop_text-buttons').append(`<div class='questions'>${arrayDropR}</div>`);
+
+	};
+
+	$('#new-text').on('click', function() {
+		dragDropTextEx();
+	});
+
+	dragDropTextEx();
+
 	/*select*/
 
 	/*var selectValues = { "3": "lessons", "4": "flat"};*/
@@ -295,6 +333,36 @@ $(document).ready(function() {
 	});
 	$('#new-tick').click();
 	$('#button-pairs1').click();
+
+
+	/*verbs*/
+	var newVerbs = function() {
+		var verbsArr = irrVerbs;
+		var index = Math.floor(Math.random() * verbsArr.length) + 0;
+		$('#verb-translation').text(verbsArr[index].translation);
+		$("#button-verb-submit").on('click', function(e) {
+			e.preventDefault();
+			console.log($('#form1').val() , verbsArr[index].form1);
+			if ($('#form1').val() !== verbsArr[index].form1){
+				$('#form1').addClass('error');
+			}
+			if ($('#form2').val() !== verbsArr[index].form2){
+				$('#form2').addClass('error');
+			}
+			if ($('#form3').val() !== verbsArr[index].form3){
+				$('#form3').addClass('error');
+			}
+		})
+	}
+	$(".input-verbs").on('focus', function() {
+		$(this).removeClass('error');
+	});
+	$("#button-verb").on('click', function() {
+		newVerbs();
+	});
+
+newVerbs();
+
 
 });/*ready*/
 

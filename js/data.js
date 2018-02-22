@@ -99,7 +99,7 @@ var arrays = [
 		{en:"yellow",ru:"жовтий"},
 		{en:"pink",ru:"рожевий"},
 	],[
-		{en:"look",ru:"дивитись"},
+		/*{en:"look",ru:"дивитись"},
 		{en:"circle",ru:"обводити"},
 		{en:"read",ru:"читати"},
 		{en:"match",ru:"з'єднати"},
@@ -120,7 +120,12 @@ var arrays = [
 		{en:"do sums",ru:"рахувати"},
 		{en:"point",ru:"нумеровати"},
 		{en:"tell",ru:"розповідати"},
-		{en:"find out",ru:"дізнатися"}
+		{en:"find out",ru:"дізнатися"}*/
+		{en:"eat",ru:"їсти"},
+		{en:"drink",ru:"пити"},
+		{en:"cook",ru:"готувати"},
+		{en:"make",ru:"робити/сделать"},
+
 	],[
 		{en:"eye",ru:"око"},
 		{en:"ear",ru:"вухо"},
@@ -326,4 +331,37 @@ var correctSentence = [
 		{id:9,sentence:"What do you do?",isCorrect:"1"},
 		{id:10,sentence:"What does you do?",isCorrect:"0"},
 	]*/
+]
+var dragDropText = [
+[
+		{first: "Sam is a schoolboy. He gets up at 8 and he has breakfast. For breakfast he usually eats ",drop:"toasts",last:""},
+		{first: "with",drop:"jam",last:"and drinks. "},
+		{first: "a cup of ",drop:"tea",last:". "},
+		{first: "&nbsp;Sam's school starts at 9 o'clock. He usually takes his lunch to school. He takes a ",drop:"sandwich",last:","},
+		{first: "a",drop:"banana",last:"and a packet of"},
+		{first: "",drop:"juice",last:". "},
+		{first: "&nbsp;He never takes an ",drop:"orange",last:"for lunch - Sam doesn't like oranges."},
+]
+]
+var irrVerbs = [
+	{form1: "be", form2: "was", form3: "been", translation: "быть"},
+	{form1: "beat", form2: "beat", form3: "beaten", translation: "бить"},
+	/*{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},
+	{first: "", second: "", third: "", translation: ""},*/
+
 ]

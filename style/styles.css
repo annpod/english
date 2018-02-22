@@ -625,40 +625,26 @@ input[type="checkbox"] {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-/*nav*/
-.nav {
+.drag-drop_text .answers ,
+.drag-drop_text-buttons .questions{
 	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
 }
-.nav-item {
-	height: 300px;
-	width: 49%;
-	font-family: 'Carter One', cursive;
-	font-size: 30px;
-	color: blue;
+.drag-drop_text .text{
+	display: inline-block;
 }
-/*
-.nav-item#vocabulary{
-	background: url('../image/6.jpg') no-repeat center center;
-	background-size: 300px auto;
+
+.drag-drop_text .text span{
+	line-height: 56px;
+	display: inline-block;
+	vertical-align: middle;
 }
-.nav-item#grammar{
-	background: url('../image/7.jpg') no-repeat center center;
-	background-size: 300px auto;
+.drag-drop_text .text span.drop {
+	display: inline-block;
+	 float: none;
+	 line-height: 2px;
 }
-.nav-item#dialogs{
-	background: url('../image/3.jpg') no-repeat center center;
-	background-size: 300px auto;
+.drag-drop_text-buttons button{
+	min-height: 28px;
+	height: 28px;
+	line-height: 19px;
 }
-.nav-item#mistakes{
-	background: url('../image/4.jpg') no-repeat center center;
-	background-size: 300px auto;
-}
-.nav-item#tasks{
-	background: url('../image/5.jpg') no-repeat center center;
-	background-size: 300px auto;
-}
-*/
