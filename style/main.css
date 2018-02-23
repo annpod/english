@@ -1,0 +1,37 @@
+.page-content{
+	background: url("../image/main.png") no-repeat center center rgba(255, 255, 255, 0.95);
+	background-size: auto 100%;
+}
+.nav {
+	list-style: none;
+}
+.nav-item {
+	font-family: 'Carter One', cursive;
+	font-size: 16px;
+	color: blue;
+}
+.nav-item#vocabulary {
+	position: absolute;
+	top: 215px;
+	left: 177px;
+}
+.nav-item#grammar{
+	position: absolute;
+	top: 151px;
+	left: 401px;
+}
+.nav-item#dialogs{
+	position: absolute;
+	top: 151px;
+	left: 545px;
+}
+.nav-item#mistakes{
+	position: absolute;
+	top: 165px;
+	left: 686px;
+}
+.nav-item#tasks{
+	position: absolute;
+	top: 440px;
+	left: 65px;
+}
