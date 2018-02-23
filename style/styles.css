@@ -648,3 +648,43 @@ input[type="checkbox"] {
 	height: 28px;
 	line-height: 19px;
 }
+.input-verbs:focus,
+.input-verbs:active {outline: none;}
+.input-verbs {
+	height: 28px;
+	width: 160px;
+	padding: 3px;
+}
+#verb-translation {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.answer-result,
+.verb-result {
+	height: 25px;
+	width: 18px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.answer-result {
+	margin-left: 0;
+	margin-right: 10px;
+}
+.answer-result.correct,
+.verb-result.correct {
+	background: url('../image/check_g.png') no-repeat center right;
+	background-size: 18px auto;
+	border: none !important;
+}
+.answer-result.error,
+.verb-result.error {
+	background: url('../image/cross.png') no-repeat center right;
+	background-size: 20px auto;
+	border: none !important;;
+}
+.verbs-holder {
+	display: flex;
+}
+.verbs-holder input {
+	margin-right: 5px;
+}

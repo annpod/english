@@ -53,6 +53,7 @@ $(document).ready(function() {
 	var newQuestion = function() {
 		$('#error').hide();
 		$('#answer').val('');
+		$('.answer-result').removeClass('correct error');
 		//i = Math.floor(Math.random() * arr.length) + 0;		
 		
 		if (i >= arr.length) {
@@ -96,12 +97,15 @@ $(document).ready(function() {
 	 
 	$( "#form" ).submit(function( event ) {	 
 	  event.preventDefault();
+		$('.answer-result').removeClass('correct error');
 	  var answer = $('#answer').val();
 	  
-	  if (answer == translation) {		
+	  if (answer == translation) {
+		  $('.answer-result').addClass('correct');
 			setTimeout(function(){  newQuestion(); }, 1500);	 
 
 	  } else {
+		  $('.answer-result').addClass('error');
 		  $('#answer').addClass('error');
 	  }
 
@@ -236,7 +240,6 @@ $(document).ready(function() {
 		var array;
 		var index = Math.floor(Math.random() * dragDropText.length) + 0;
 		var dragDropArr = dragDropText[index];
-console.log(dragDropText);
 		$('#drag-drop_text').html('');
 		$('.fill-gaps .drag-drop_text-buttons').html('');
 
@@ -339,10 +342,16 @@ console.log(dragDropText);
 	var newVerbs = function() {
 		var verbsArr = irrVerbs;
 		var index = Math.floor(Math.random() * verbsArr.length) + 0;
+		$(".input-verbs").val("");
+		$(".input-verbs").removeClass('error');
+		$('.verb-result').removeClass('correct error');
+		$('#form1').focus();
 		$('#verb-translation').text(verbsArr[index].translation);
-		$("#button-verb-submit").on('click', function(e) {
+
+		$("#form-verbs").on('submit', function(e) {
 			e.preventDefault();
-			console.log($('#form1').val() , verbsArr[index].form1);
+			console.log('verbsArr',verbsArr);
+			$(".input-verbs").removeClass('error');
 			if ($('#form1').val() !== verbsArr[index].form1){
 				$('#form1').addClass('error');
 			}
@@ -351,6 +360,15 @@ console.log(dragDropText);
 			}
 			if ($('#form3').val() !== verbsArr[index].form3){
 				$('#form3').addClass('error');
+			}
+
+			if ($( ".input-verbs" ).hasClass( "error" )){
+				$('.verb-result').addClass('error');
+				console.log($( ".input-verbs" ).hasClass( "error" ));
+			} else {
+				$('.verb-result').removeClass('error');
+				$('.verb-result').addClass('correct');
+				setTimeout(function(){  newVerbs(); }, 1500);
 			}
 		})
 	}

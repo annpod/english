@@ -344,24 +344,23 @@ var dragDropText = [
 ]
 ]
 var irrVerbs = [
-	{form1: "be", form2: "was", form3: "been", translation: "быть"},
-	{form1: "beat", form2: "beat", form3: "beaten", translation: "бить"},
-	/*{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},
-	{first: "", second: "", third: "", translation: ""},*/
-
+	{form1: "1", form2: "1", form3: "1", translation: "1"},
+	{form1: "2", form2: "2", form3: "2", translation: "2"},
+	/*{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},
+	{form1: "", form2: "", form3: "", translation: ""},*/
 ]

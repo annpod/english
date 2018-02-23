@@ -41,6 +41,7 @@
 				<div id="world"></div>
 				<form id="form">
 					<input id="answer" type="text" autocomplete="off" />
+					<div class="answer-result"></div>
 					<button id="button" class="button-check" type="submit"></button>
 					<button id="button-next" class="button-new" type="button"></button>
 					<button id="button-speak" class="button-speak" type="button">Speak</button>
@@ -399,14 +400,16 @@
 			<div class="verbs-wrap">
 				<form id="form-verbs">
 					<div id="verb-translation"></div>
-					<input id="form1" type="text" class="input-verbs" autocomplete="off" />
-					<input id="form2" type="text" class="input-verbs" autocomplete="off" />
-					<input id="form3" type="text" class="input-verbs" autocomplete="off" />
+					<div class="verbs-holder">
+						<input id="form1" type="text" class="input-verbs" autocomplete="off" />
+						<input id="form2" type="text" class="input-verbs" autocomplete="off" />
+						<input id="form3" type="text" class="input-verbs" autocomplete="off" />
+						<div class="verb-result"></div>
+					</div>
+						<button id="button-verb-submit" class="button-check" type="submit"></button>
 
-					<button id="button-verb-submit" class="button-check" type="submit"></button>
-
-					<button id="button-verb" class="button-new" type="button"></button>
-					<button id="button-verb-speak" class="button-speak" type="button"></button>
+						<button id="button-verb" class="button-new" type="button"></button>
+						<button id="button-verb-speak" class="button-speak" type="button"></button>
 
 				</form>
 			</div>			
