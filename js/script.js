@@ -364,7 +364,6 @@ $(document).ready(function() {
 
 			if ($( ".input-verbs" ).hasClass( "error" )){
 				$('.verb-result').addClass('error');
-				console.log($( ".input-verbs" ).hasClass( "error" ));
 			} else {
 				$('.verb-result').removeClass('error');
 				$('.verb-result').addClass('correct');
@@ -403,10 +402,15 @@ function drag(ev) {
 
 function drop(ev) {
 	ev.preventDefault();
+
 	var data = ev.dataTransfer.getData("text");
+	var text = $("#"+data).text();
 	questionDrag =  $(ev.target).data("id");
 	if(questionDrag === answerDrag) {
 		ev.target.appendChild(document.getElementById(data));
+		if ($('body').hasClass('sound')) {
+			responsiveVoice.speak("" + text + "");
+		}
 	}
 }
 /*tabs*/

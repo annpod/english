@@ -173,7 +173,7 @@ var arrays = [
 
 
 var dragDrop = [
-	[
+	/*[
 		{first: "I like to",drop:"read",last:"books."},
 		{first: "I like to",drop:"listen to",last:"music."},
 		{first: "I don't like to",drop:"clean",last:"my room."},
@@ -205,6 +205,15 @@ var dragDrop = [
 		{first: "Let's",drop:"play",last:"games."},
 		{first: "I don't like",drop:"playing",last:"football."},
 		{first: "I like",drop:"ridding",last:"a bike."},
+	]*/
+	[
+		{first: "I can",drop:"make",last:"airplanes."},
+		{first: "I want to",drop:"eat",last:"a sandwich."},
+		{first: "I",drop:"make",last:"my bed every morning."},
+		{first: "Can you",drop:"cook",last:"a hamburger?"},
+		{first: "Let's",drop:"make",last:"masks."},
+		{first: "Let's",drop:"cook",last:"a cake."},
+		{first: "Would you like to",drop:"drink",last:"a cup of tea?"},
 	]
 ]
 
@@ -237,7 +246,7 @@ var sentences=[
 
 
 var arrayPairs = [
-	{en:"What do you do?", ru:"I am a pupil."},
+	/*{en:"What do you do?", ru:"I am a pupil."},
 	{en:"What is your name?", ru:"My name is Denis."},
 	{en:"How old are you?", ru:"I am ten."},
 	{en:"Where are you from?", ru:"I am from Ukraine."},
@@ -252,14 +261,19 @@ var arrayPairs = [
 	{en:"What time is it?", ru:"It is 6 o'clock in the morning."},
 	{en:"What is it about?", ru:"It is about Dunno on the Moon."},
 	{en:"Pass me some bread, please", ru:"Here you are."},
-	{en:"Some juice, please.", ru:"Apple or orange?"},
-	/*{first:"jump", second:"стрибати"},
-	{first:"jump", second:"стрибати"},*/
+	{en:"Some juice, please.", ru:"Apple or orange?"},*/
+	{en:"Would you like to eat?", ru:"Yes, please."},
+	{en:"Can you cook?", ru:"No, but I help my mother."},
+	{en:"I can make airplanes.", ru:"That's great!"},
+	{en:"I want to eat.", ru:"You can eat this sandwich."},
+	{en:"I want to drink.", ru:"Juice or water?"},
+	{en:"I make the bed every morning.", ru:"You are a very good boy."}
+
 
 	]
 
 var correctSentence = [
-	[
+	/*[
 		{id:1,sentence:"What do you do?",isCorrect:"1"},
 		{id:2,sentence:"What does you do?",isCorrect:"0"},
 		{id:3,sentence:"What does he do?",isCorrect:"1"},
@@ -307,18 +321,28 @@ var correctSentence = [
 		{id:9,sentence:"What do you do?",isCorrect:"1"},
 		{id:10,sentence:"What does you do?",isCorrect:"0"},
 	]
-	/*,[
-		{id:1,sentence:"What do you do?",isCorrect:"1"},
-		{id:2,sentence:"What does you do?",isCorrect:"0"},
-		{id:3,sentence:"What do you do?",isCorrect:"1"},
-		{id:4,sentence:"What does you do?",isCorrect:"0"},
-		{id:5,sentence:"What do you do?",isCorrect:"1"},
-		{id:6,sentence:"What does you do?",isCorrect:"0"},
-		{id:7,sentence:"What do you do?",isCorrect:"1"},
-		{id:8,sentence:"What does you do?",isCorrect:"0"},
-		{id:9,sentence:"What do you do?",isCorrect:"1"},
-		{id:10,sentence:"What does you do?",isCorrect:"0"},
-	]
+	{en:"Would you like to eat?", ru:"Yes, please."},
+	{en:"Can you cook?", ru:"No, but I help my mother."},
+	{en:"I can make airplanes.", ru:"That's great!"},
+	{en:"I want to eat.", ru:"You can eat this sandwich."},
+	{en:"I want to drink.", ru:"Juice or water?"},
+	{en:"I make the bed every morning.", ru:"You are a very good boy."}
+	*/[
+		{id:1,sentence:"Would you like to eat?",isCorrect:"1"},
+		{id:2,sentence:"Would you liking to eat?",isCorrect:"0"},
+		{id:3,sentence:"Can you cook?",isCorrect:"1"},
+		{id:4,sentence:"Can you drinks?",isCorrect:"0"},
+		{id:5,sentence:"Can you make a plane?",isCorrect:"1"},
+		{id:6,sentence:"I can make airplanes.",isCorrect:"1"},
+		{id:7,sentence:"I want to drink.",isCorrect:"1"},
+		{id:8,sentence:"He wants to drink.",isCorrect:"1"},
+		{id:9,sentence:"I make the bed every morning.",isCorrect:"1"},
+		{id:10,sentence:"She make the bed every morning.",isCorrect:"0"},
+		{id:11,sentence:"She makes the bed every morning.",isCorrect:"1"},
+		{id:12,sentence:"Let's cook a cake.",isCorrect:"1"},
+		{id:13,sentence:"She drink water every day.",isCorrect:"0"},
+		{id:14,sentence:"I eat bread every day.",isCorrect:"1"},
+	]/*
 	,[
 		{id:1,sentence:"What do you do?",isCorrect:"1"},
 		{id:2,sentence:"What does you do?",isCorrect:"0"},
