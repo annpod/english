@@ -24,8 +24,6 @@
 				var $world = '',
 					$lettersArray = [],
 					$index = 0;
-console.log('init');
-console.log($world);
 				$button.click(function (e) {
 					$container.html('');
 					$world = '';
@@ -44,11 +42,11 @@ console.log($world);
 					}	
 
 					$arrayEmpty = $lettersArray.map((item, index) => (
-						`<div class="empty-item drop" id="drop20${index}" data-id=${index} ondrop="drop(event)" ondragover="allowDrop(event)"></div>`
+						`<div class="empty-item drop" id="drop20${index}" data-id=${item} ondrop="drop(event)" ondragover="allowDrop(event)"></div>`
 					)).join('');
 
 					$arrayL = $lettersArray.map((item, index) => (
-						`<button class="letter-item drag" id="drag20${index}" data-id=${index} draggable="true" ondragstart="drag(event)">${item}</button>`
+						`<button class="letter-item drag" id="drag20${index}" data-id=${item} draggable="true" ondragstart="drag(event)">${item}</button>`
 					));					
 					$arrayL.sort(compareRandom);
 					var $arrayLR = $arrayL.map((item, index) =>(item)).join('');

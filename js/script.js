@@ -10,9 +10,6 @@ $(document).ready(function() {
 	var navigation = $('#button-home');
 	$('#error').hide();
 
-	function compareRandom(a, b) {
-		return Math.random() - 0.5;
-	}
 /*navigation*/
 
 /*/navigation*/
@@ -207,6 +204,9 @@ $(document).ready(function() {
 
 
 
+function compareRandom(a, b) {
+	return Math.random() - 0.5;
+}
 /*drag&drop*/
 var answerDrag,
 	questionDrag;
@@ -226,6 +226,7 @@ function drop(ev) {
 	var data = ev.dataTransfer.getData("text");
 	var text = $("#"+data).text();
 	questionDrag =  $(ev.target).data("id");
+	console.log(questionDrag, answerDrag);
 	if(questionDrag === answerDrag) {
 		ev.target.appendChild(document.getElementById(data));
 		if ($('body').hasClass('sound')) {
