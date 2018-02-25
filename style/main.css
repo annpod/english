@@ -10,27 +10,27 @@
 	font-size: 16px;
 	color: blue;
 }
-.nav-item#vocabulary {
+.nav-item#vocabulary-nav {
 	position: absolute;
 	top: 215px;
 	left: 177px;
 }
-.nav-item#grammar{
+.nav-item#grammar-nav{
 	position: absolute;
 	top: 151px;
 	left: 401px;
 }
-.nav-item#dialogs{
+.nav-item#dialogs-nav{
 	position: absolute;
 	top: 151px;
 	left: 545px;
 }
-.nav-item#mistakes{
+.nav-item#mistakes-nav{
 	position: absolute;
 	top: 165px;
 	left: 686px;
 }
-.nav-item#tasks{
+.nav-item#tasks-nav{
 	position: absolute;
 	top: 440px;
 	left: 65px;

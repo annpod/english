@@ -691,9 +691,6 @@ input[type="checkbox"] {
 	margin-right: 5px;
 }
 .button-home {
-	position: absolute;
-	top: 20px;
-	left: 20px;
 	height: 30px;
 	width: 30px;
 	background: url('../image/home.svg') no-repeat center center #63afbd;
@@ -703,4 +700,19 @@ input[type="checkbox"] {
 	z-index: 20;
 	box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.4);
 	transition: 0.3s all;
+	display: block;
+	margin-bottom: 10px;
+}
+/*navigation*/
+.navigation {
+	height: 55px;
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	transition: 0.5s all;
+}
+.navigation:hover {
+	display: block;
+	height: 100%;
 }

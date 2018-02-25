@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var arr = arrays[0];
 	var questions = [];
 	var answers = [];
+	var navigation = $('#button-home');
 	$('#error').hide();
 
 	function compareRandom(a, b) {
@@ -22,225 +23,182 @@ $(document).ready(function() {
 		$('.button-speak').toggleClass('disable');
 	});
 	
-	$(".preposition-text select").on('change',function() {
-		$(this).removeClass('error');
-		$(this).removeClass('right');
-	});
+	// $(".preposition-text select").on('change',function() {
+	// 	$(this).removeClass('error');
+	// 	$(this).removeClass('right');
+	// });
 
 
-	$( "#button-pairs" ).on( "click", function() {
-		/*newPairs();*/
-	});
+	// $( "#button-pairs" ).on( "click", function() {
+	// 	/*newPairs();*/
+	// });
 	
 
-	$( "#button-sentence" ).on( "click", function() {
-		newSentence();
-	});	
+	// $( "#button-sentence" ).on( "click", function() {
+	// 	newSentence();
+	// });	
 	
-	var sentence, splitSentence, rightSentence, translationSent;	
-	var newSentence = function() {
-		var arrayS = [];
-		$('.dropme').html('');
-		var i = Math.floor(Math.random() * sentences.length);
-		sentence = sentences[i].title;
-		translationSent = sentences[i].translation;
-		splitSentence = sentence.split(" ");
-		rightSentence = sentence.split(" ");
-		splitSentence.sort(compareRandom);
+	// var sentence, splitSentence, rightSentence, translationSent;	
+	// var newSentence = function() {
+	// 	var arrayS = [];
+	// 	$('.dropme').html('');
+	// 	var i = Math.floor(Math.random() * sentences.length);
+	// 	sentence = sentences[i].title;
+	// 	translationSent = sentences[i].translation;
+	// 	splitSentence = sentence.split(" ");
+	// 	rightSentence = sentence.split(" ");
+	// 	splitSentence.sort(compareRandom);
 		
-		arrayHtml = splitSentence.map((item) =>(
-			`<li>${item}</li>`
-		)).join('');
-		$('.dropme').append(arrayHtml);			
-		$('.dropme').dropme('enable');	
-	}	
-	newSentence();
+	// 	arrayHtml = splitSentence.map((item) =>(
+	// 		`<li>${item}</li>`
+	// 	)).join('');
+	// 	$('.dropme').append(arrayHtml);			
+	// 	$('.dropme').dropme('enable');	
+	// }	
+	// newSentence();
 
 
-	$('#button-check').on('click', function(){
-		var sentenceNew = [];
-		for (i=0;i<splitSentence.length;i++) {
-			sentenceNew.push($('.dropme li').eq(i).text());		
-		}
-		if(rightSentence.length == sentenceNew.length && rightSentence.every((v,i)=> v === sentenceNew[i])){
-			$('.dropme li').removeClass('error');
-			$('.dropme li').addClass('right');
-			if ($('body').hasClass('sound')) {
-				responsiveVoice.speak("" + rightSentence + "");
-			}
-		} else {
-			$('.dropme li').addClass('error');
-		}
+	// $('#button-check').on('click', function(){
+	// 	var sentenceNew = [];
+	// 	for (i=0;i<splitSentence.length;i++) {
+	// 		sentenceNew.push($('.dropme li').eq(i).text());		
+	// 	}
+	// 	if(rightSentence.length == sentenceNew.length && rightSentence.every((v,i)=> v === sentenceNew[i])){
+	// 		$('.dropme li').removeClass('error');
+	// 		$('.dropme li').addClass('right');
+	// 		if ($('body').hasClass('sound')) {
+	// 			responsiveVoice.speak("" + rightSentence + "");
+	// 		}
+	// 	} else {
+	// 		$('.dropme li').addClass('error');
+	// 	}
 
-	});
+	// });
 	
-	$('#button-translation').on('click', function(){
-		$('#translation').text(translationSent);
-	});
+	// $('#button-translation').on('click', function(){
+	// 	$('#translation').text(translationSent);
+	// });
 
 
-	/*drag & drop*/
-	var dragDropEx = function() {
-		var arrayDrag = [];
-		var arrayDrop = [];
-		var indexArr = [];
-		var rand, index;
-		var array;
-		var index = Math.floor(Math.random() * dragDrop.length) + 0;
-		var dragDropArr = dragDrop[index];
+	// /*drag & drop*/
+	// var dragDropEx = function() {
+	// 	var arrayDrag = [];
+	// 	var arrayDrop = [];
+	// 	var indexArr = [];
+	// 	var rand, index;
+	// 	var array;
+	// 	var index = Math.floor(Math.random() * dragDrop.length) + 0;
+	// 	var dragDropArr = dragDrop[index];
 
-		$('#drag-drop').html('');
-		$('.fill-gaps .drag-drop_buttons').html('');
-
-
-		arrayDrag = dragDropArr.map((item, index) =>(
-			`<div class="text">
-				<div>${item.first}</div>
-				<div class="drop" id="drop${index}" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="${index}"></div>
-				<div>${item.last}</div>
-			</div>`
-		)).join('');
-
-		arrayDrop = dragDropArr.map((item, index) =>(
-			`<button class="drag" id="drag${index}"  draggable="true" data-id="${index}"
-					ondragstart="drag(event)">${item.drop}</button>`
-		));
-		arrayDrop.sort();
-		var arrayDropR = arrayDrop.map((item, index) =>(item)).join('');
-		$('#drag-drop').append(`<div class='answers'>${arrayDrag}</div>`);
-		$('.drag-drop_buttons').append(`<div class='questions'>${arrayDropR}</div>`);
-
-	};
-
-	$('#button-fill').on('click', function() {
-		dragDropEx();
-	});
-
-	dragDropEx();
-
-		var dragDropTextEx = function() {
-		var arrayDrag = [];
-		var arrayDrop = [];
-		var indexArr = [];
-		var rand, index;
-		var array;
-		var index = Math.floor(Math.random() * dragDropText.length) + 0;
-		var dragDropArr = dragDropText[index];
-		$('#drag-drop_text').html('');
-		$('.fill-gaps .drag-drop_text-buttons').html('');
+	// 	$('#drag-drop').html('');
+	// 	$('.fill-gaps .drag-drop_buttons').html('');
 
 
-		arrayDrag = dragDropArr.map((item, index) =>(
-			`<span class="text">
-				<span>${item.first}</span>
-				<span class="drop" id="drop${index+600}" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="${index+600}"></span>
-				<span>${item.last}</span>
-			</span>`
-		)).join('');
+	// 	arrayDrag = dragDropArr.map((item, index) =>(
+	// 		`<div class="text">
+	// 			<div>${item.first}</div>
+	// 			<div class="drop" id="drop${index}" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="${index}"></div>
+	// 			<div>${item.last}</div>
+	// 		</div>`
+	// 	)).join('');
 
-		arrayDrop = dragDropArr.map((item, index) =>(
-			`<button class="drag" id="drag${index+600}"  draggable="true" data-id="${index+600}"
-					ondragstart="drag(event)">${item.drop}</button>`
-		));
-		arrayDrop.sort();
-		var arrayDropR = arrayDrop.map((item, index) =>(item)).join('');
-		$('#drag-drop_text').append(`<div class='answers'>${arrayDrag}</div>`);
-		$('.drag-drop_text-buttons').append(`<div class='questions'>${arrayDropR}</div>`);
+	// 	arrayDrop = dragDropArr.map((item, index) =>(
+	// 		`<button class="drag" id="drag${index}"  draggable="true" data-id="${index}"
+	// 				ondragstart="drag(event)">${item.drop}</button>`
+	// 	));
+	// 	arrayDrop.sort();
+	// 	var arrayDropR = arrayDrop.map((item, index) =>(item)).join('');
+	// 	$('#drag-drop').append(`<div class='answers'>${arrayDrag}</div>`);
+	// 	$('.drag-drop_buttons').append(`<div class='questions'>${arrayDropR}</div>`);
 
-	};
+	// };
 
-	$('#new-text').on('click', function() {
-		dragDropTextEx();
-	});
+	// $('#button-fill').on('click', function() {
+	// 	dragDropEx();
+	// });
 
-	dragDropTextEx();
+	// dragDropEx();
 
-	/*select*/
+	// 	var dragDropTextEx = function() {
+	// 	var arrayDrag = [];
+	// 	var arrayDrop = [];
+	// 	var indexArr = [];
+	// 	var rand, index;
+	// 	var array;
+	// 	var index = Math.floor(Math.random() * dragDropText.length) + 0;
+	// 	var dragDropArr = dragDropText[index];
+	// 	$('#drag-drop_text').html('');
+	// 	$('.fill-gaps .drag-drop_text-buttons').html('');
+
+
+	// 	arrayDrag = dragDropArr.map((item, index) =>(
+	// 		`<span class="text">
+	// 			<span>${item.first}</span>
+	// 			<span class="drop" id="drop${index+600}" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="${index+600}"></span>
+	// 			<span>${item.last}</span>
+	// 		</span>`
+	// 	)).join('');
+
+	// 	arrayDrop = dragDropArr.map((item, index) =>(
+	// 		`<button class="drag" id="drag${index+600}"  draggable="true" data-id="${index+600}"
+	// 				ondragstart="drag(event)">${item.drop}</button>`
+	// 	));
+	// 	arrayDrop.sort();
+	// 	var arrayDropR = arrayDrop.map((item, index) =>(item)).join('');
+	// 	$('#drag-drop_text').append(`<div class='answers'>${arrayDrag}</div>`);
+	// 	$('.drag-drop_text-buttons').append(`<div class='questions'>${arrayDropR}</div>`);
+
+	// };
+
+	// $('#new-text').on('click', function() {
+	// 	dragDropTextEx();
+	// });
+
+	// dragDropTextEx();
+
+	// /*select*/
 
 
 
-	/* $('#button').on('click', function(){
-        var text = $('input#answer').val();
-        responsiveVoice.speak("" + text +"");
+	// /* $('#button').on('click', function(){
+ //        var text = $('input#answer').val();
+ //        responsiveVoice.speak("" + text +"");
        
-	});*/
-	/**/
+	// });*/
+	// /**/
 
-	$('#button-tick').on('click', function() {
-		var $checked = $('.tick-checkbox input');
-		 $checked.each(function(){
-			if (($(this).prop('checked') & $(this).val() == 1) || (!$(this).prop('checked') & $(this).val() == 0) ) {
-				$(this).parent().removeClass('error');
-				$(this).parent().addClass('correct');
-			} else {
-				$(this).parent().removeClass('correct');
-				$(this).parent().addClass('error');
-			}
-		})
-	});
+	// $('#button-tick').on('click', function() {
+	// 	var $checked = $('.tick-checkbox input');
+	// 	 $checked.each(function(){
+	// 		if (($(this).prop('checked') & $(this).val() == 1) || (!$(this).prop('checked') & $(this).val() == 0) ) {
+	// 			$(this).parent().removeClass('error');
+	// 			$(this).parent().addClass('correct');
+	// 		} else {
+	// 			$(this).parent().removeClass('correct');
+	// 			$(this).parent().addClass('error');
+	// 		}
+	// 	})
+	// });
 
-	$('#new-tick').on('click', function() {
-		var index = Math.floor(Math.random() * correctSentence.length) + 0;
-		var $sentence = correctSentence[index];
-		var $arraySent= [];
+	// $('#new-tick').on('click', function() {
+	// 	var index = Math.floor(Math.random() * correctSentence.length) + 0;
+	// 	var $sentence = correctSentence[index];
+	// 	var $arraySent= [];
 
-		$('.tick-checkbox').html('');
+	// 	$('.tick-checkbox').html('');
 
-		for (var i = 0; i < $sentence.length; i++) {
-			$arraySent = $sentence.map((item) => (
-				`<label class="checkbox-container"><input type="checkbox" value=${item.isCorrect}>${item.sentence}<span class="checkmark"></span></label><br/>`
-			)).join('');
-		}
-		$('.tick-checkbox').append(`${$arraySent}`);
+	// 	for (var i = 0; i < $sentence.length; i++) {
+	// 		$arraySent = $sentence.map((item) => (
+	// 			`<label class="checkbox-container"><input type="checkbox" value=${item.isCorrect}>${item.sentence}<span class="checkmark"></span></label><br/>`
+	// 		)).join('');
+	// 	}
+	// 	$('.tick-checkbox').append(`${$arraySent}`);
 
-		/*$('.tick-checkbox input').prop('checked', false).removeClass('error correct');*/
+	// 	/*$('.tick-checkbox input').prop('checked', false).removeClass('error correct');*/
 
-	});
-	$('#new-tick').click();
-	$('#button-pairs1').click();
-
-
-	/*verbs*/
-	var newVerbs = function() {
-		var verbsArr = irrVerbs;
-		var index = Math.floor(Math.random() * verbsArr.length) + 0;
-		$(".input-verbs").val("");
-		$(".input-verbs").removeClass('error');
-		$('.verb-result').removeClass('correct error');
-		$('#form1').focus();
-		$('#verb-translation').text(verbsArr[index].translation);
-
-		$("#form-verbs").on('submit', function(e) {
-			e.preventDefault();
-			console.log('verbsArr',verbsArr);
-			$(".input-verbs").removeClass('error');
-			if ($('#form1').val() !== verbsArr[index].form1){
-				$('#form1').addClass('error');
-			}
-			if ($('#form2').val() !== verbsArr[index].form2){
-				$('#form2').addClass('error');
-			}
-			if ($('#form3').val() !== verbsArr[index].form3){
-				$('#form3').addClass('error');
-			}
-
-			if ($( ".input-verbs" ).hasClass( "error" )){
-				$('.verb-result').addClass('error');
-			} else {
-				$('.verb-result').removeClass('error');
-				$('.verb-result').addClass('correct');
-				setTimeout(function(){  newVerbs(); }, 1500);
-			}
-		})
-	}
-	$(".input-verbs").on('focus', function() {
-		$(this).removeClass('error');
-	});
-	$("#button-verb").on('click', function() {
-		newVerbs();
-	});
-
-newVerbs();
+	// });
+	// $('#new-tick').click();
+	// $('#button-pairs1').click();
 
 
 });/*ready*/
