@@ -1,6 +1,7 @@
 .page-content{
 	background: url("../image/main.png") no-repeat center center rgba(255, 255, 255, 0.95);
 	background-size: auto 100%;
+	min-height: 855px;
 }
 .nav {
 	list-style: none;
@@ -13,25 +14,46 @@
 .nav-item#vocabulary-nav {
 	position: absolute;
 	top: 215px;
-	left: 177px;
+	left: 277px;
 }
 .nav-item#grammar-nav{
 	position: absolute;
 	top: 151px;
-	left: 401px;
+	left: 501px;
+}
+.nav-item#fill-nav{
+	position: absolute;
+	top: 440px;
+	left: 295px;
+}
+.nav-item#body-nav{
+	position: absolute;
+	top: 506px;
+	left: 453px;
 }
 .nav-item#dialogs-nav{
 	position: absolute;
 	top: 151px;
-	left: 545px;
+	left: 645px;
 }
 .nav-item#mistakes-nav{
 	position: absolute;
-	top: 165px;
-	left: 686px;
+	top: 155px;
+	left: 792px;
+	width: 100px;
 }
 .nav-item#tasks-nav{
 	position: absolute;
 	top: 440px;
-	left: 65px;
+	left: 165px;
+}
+.nav-item#irregular-nav{
+	position: absolute;
+	top: 768px;
+	left: 219px;
+}
+.nav-item#prepositions-nav {
+	position: absolute;
+	top: 756px;
+	left: 562px;
 }

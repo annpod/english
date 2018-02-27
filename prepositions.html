@@ -13,417 +13,219 @@
 </head>
 <body class="sound">
 	<main>
-		<img class="top-img" src="image/panda.png">
-		<button id="button-sound" class="button-sound" type="button"></button>
-		<div class="tabs">
-			<button class="tablinks active" onclick="openTab(event, 'Worlds')">Vocabulary</button>
-			<button class="tablinks" onclick="openTab(event, 'Sentences')">Make a sentence</button>
-			<button class="tablinks" onclick="openTab(event, 'Dialog')">Make a dialog</button>
-			<button class="tablinks" onclick="openTab(event, 'Fill')">Fill the Gaps</button>
-			<button class="tablinks" onclick="openTab(event, 'Bodys')">Body</button>
-			<button class="tablinks" onclick="openTab(event, 'Preposition')">Preposition in/on/under</button>
-			<button class="tablinks" onclick="openTab(event, 'Prepositions')">Preposition in/on/at</button>
-			<button class="tablinks" onclick="openTab(event, 'Tick')">Tick the correct</button>
-			<button class="tablinks" onclick="openTab(event, 'Complete')">Look and complete</button>
-			<button class="tablinks" onclick="openTab(event, 'Verbs')">Irregular Verbs</button>
-		</div>
 		<div class="page-content">
+			<h3>Choose correct preposition</h3>
+			<br/>
+			<div class="preposition" id="Preposition">
 
-		<div class="container tabcontent active " id="Worlds">
-			<h3>Translate</h3>
-			<h4>Choose the Set</h4>
-				<select  id="set">
-				</select>
-				<select  id="language">
-					<option value="ru">Native</option>
-					<option value="en">English</option>
-				</select>
-				<div id="world"></div>
-				<form id="form">
-					<input id="answer" type="text" autocomplete="off" />
-					<div class="answer-result"></div>
-					<button id="button" class="button-check" type="submit"></button>
-					<button id="button-next" class="button-new" type="button"></button>
-					<button id="button-speak" class="button-speak" type="button">Speak</button>
-				</form>
-				<button id="button-answer" class="answer" type="button">Show Answer</button>
-				<span id="right-answer"></span>
-			<br>
-			<h3>Make up the word</h3>
-			<button id="button-letters" class="button-newset" type="button">New word</button>
-			<button id="button-speak-letters" class="button-speak" type="button">Speak</button>
-			<div id='letters'>
-
-			</div>
-			<br>
-			<h3>Match</h3>
-			<button id="button-pairs" class="button-newset" type="button">New Set</button>
-			<div id='questions'>
-			</div>
-		</div>
-		<div class="container tabcontent " id="Sentences">
-			<h3>Make the sentence</h3>
-			<ul class="dropme grid">
-			</ul>
-			<button id="button-check" class="button-check" type="button"></button>
-			<button id="button-sentence" class="button-new" type="button"></button>
-			<br>
-			<button id="button-translation"  class="answer" type="button">Show Translation</button>
-			<span id="translation"></span>
-		</div>
-		<div class="container tabcontent " id="Dialog">
-			<h3>Match</h3>
-			<button id="button-pairs1" class="button-newset" type="button">New Set</button>
-			<div class="container" id='questions1'>
-			</div>
-
-		</div>
-		<div class="container tabcontent " id="Fill">
-			<h3>Fill the gaps</h3>
-			<div class="fill-gaps">
-				<div class="drag-drop" id="drag-drop">
+				<image src="./image/my-room-2.jpg" class="half-width" />
+				<div class="preposition-text">
+					The cat is
+					<select  data-val="on">
+						<option>in</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the bed.
+					The train is
+					<select  data-val="under">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the bed.
+					The book is
+					<select data-val="on">
+						<option>in</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the table.
+					The skateboard is
+					<select  data-val="under">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the table.
+					The rabbit is
+					<select  data-val="in">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the armchair.
+					The cloцn is
+					<select data-val="on">
+						<option>near</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the shelf and
+					<select data-val="above">
+						<option>near</option>
+						<option>above</option>
+						<option>under</option>
+					</select>
+					the table.
+					The bed is
+					<select data-val="on">
+						<option>in</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the carpet.
+					The chair is
+					<select data-val="near">
+						<option>above</option>
+						<option>in front of</option>
+						<option>near</option>
+					</select>
+					the table.
+					The dog is
+					<select  data-val="in">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the cupboard.
+					The door is
+					<select data-val="in front of">
+						<option>above</option>
+						<option>in front of</option>
+						<option>near</option>
+					</select>
+					the table.
+					The lamp is
+					<select data-val="on">
+						<option>in</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the table.
+					The picture is
+					<select  data-val="on">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the wall.
+					The umbrella is
+					<select data-val="on">
+						<option>above</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the bed.
+					The ball is
+					<select data-val="in">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the box.
+					The cup is
+					<select data-val="under">
+						<option>on</option>
+						<option>above</option>
+						<option>under</option>
+					</select>
+					the chair.
+					The drum (барабан) is
+					<select data-val="near">
+						<option>next to</option>
+						<option>near</option>
+						<option>under</option>
+					</select>
+					the chair.
+					The armchair is
+					<select  data-val="next to">
+						<option>on</option>
+						<option>next to</option>
+						<option>under</option>
+					</select>
+					the door.
+					The fish is
+					<select data-val="in">
+						<option>above</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the aquarium.
+					The boy is
+					<select data-val="near">
+						<option>above</option>
+						<option>near</option>
+						<option>next to</option>
+					</select>
+					the table.
+					The car is
+					<select data-val="in">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the cupboard.
+					The ruler is
+					<select data-val="under">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the cupboard.
+					The flag is
+					<select data-val="in">
+						<option>next to</option>
+						<option>in</option>
+						<option>on</option>
+					</select>
+					the bear's hand.
+					The cat sleeps
+					<select  data-val="on">
+						<option>in</option>
+						<option>above</option>
+						<option>on</option>
+					</select>
+					the pillow (подушка).
+					The vase is
+					<select  data-val="on">
+						<option>in</option>
+						<option>above</option>
+						<option>on</option>
+					</select>
+					the shelf (полка).
+					The table is
+					<select  data-val="above">
+						<option>on</option>
+						<option>above</option>
+						<option>under</option>
+					</select>
+					the skateboard.
+					The star is
+					<select data-val="on">
+						<option>in</option>
+						<option>on</option>
+						<option>under</option>
+					</select>
+					the bed.
+					The giraffe is
+					<select data-val="in">
+						<option>on</option>
+						<option>in</option>
+						<option>under</option>
+					</select>
+					the box.
 				</div>
-				<div class="drag-drop_buttons">
-				</div>
-			</div>
-			<button id="button-fill" class="button-newset" type="button">New Set</button>
-		</div>
-		<div class="container tabcontent " id="Bodys">
-			<h3>Body</h3>
-			<div class="body-wrapp">
-				<div class="drag-drop" id='body'>
-					<div class="drop" id="drop101" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="1"></div>
-					<div class="drop" id="drop102" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="2"></div>
-					<div class="drop" id="drop103" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="3"></div>
-					<div class="drop" id="drop104" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="4"></div>
-					<div class="drop" id="drop105" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="5"></div>
-					<div class="drop" id="drop106" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="6"></div>
-					<div class="drop" id="drop107" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="7"></div>
-					<div class="drop" id="drop108" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="8"></div>
-					<div class="drop" id="drop109" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="9"></div>
-					<div class="drop" id="drop111" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="10"></div>
-					<div class="drop" id="drop112" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="11"></div>
-					<div class="drop" id="drop113" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="12"></div>
-					<div class="drop" id="drop114" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="13"></div>
-					<div class="drop" id="drop115" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="14"></div>
-					<div class="drop" id="drop116" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="15"></div>
-					<div class="drop" id="drop117" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="16"></div>
-				</div>
-				<div class="dd_buttons">
-					<button class="drag" id="drag108" draggable="true" data-id="1" ondragstart="drag(event)">head</button>
-					<button class="drag" id="drag101" draggable="true" data-id="2" ondragstart="drag(event)">eye</button>
-					<button class="drag" id="drag107" draggable="true" data-id="3" ondragstart="drag(event)">nose</button>
-					<button class="drag" id="drag103" draggable="true" data-id="4" ondragstart="drag(event)">mouth</button>
-					<button class="drag" id="drag106" draggable="true" data-id="5" ondragstart="drag(event)">elbow</button>
-					<button class="drag" id="drag109" draggable="true" data-id="6" ondragstart="drag(event)">arm</button>
-					<button class="drag" id="drag110" draggable="true" data-id="7" ondragstart="drag(event)">leg</button>
-					<button class="drag" id="drag102" draggable="true" data-id="8" ondragstart="drag(event)">foot</button>
-					<button class="drag" id="drag111" draggable="true" data-id="9" ondragstart="drag(event)">knee</button>
-					<button class="drag" id="drag112" draggable="true" data-id="10" ondragstart="drag(event)">finger</button>
-					<button class="drag" id="drag113" draggable="true" data-id="11" ondragstart="drag(event)">hand</button>
-					<button class="drag" id="drag114" draggable="true" data-id="12" ondragstart="drag(event)">chest</button>
-					<button class="drag" id="drag115" draggable="true" data-id="13" ondragstart="drag(event)">neck</button>
-					<button class="drag" id="drag116" draggable="true" data-id="14" ondragstart="drag(event)">cheek</button>
-					<button class="drag" id="drag117" draggable="true" data-id="15" ondragstart="drag(event)">ear</button>
-					<button class="drag" id="drag118" draggable="true" data-id="16" ondragstart="drag(event)">hair</button>
-				</div>
+				<button id="button-select" class="button-check" type="submit"></button>
 			</div>
 		</div>
-		<div class="preposition  tabcontent" id="Preposition">
-			<image src="./image/my-room-2.jpg" class="half-width" />
-
-			<div class="preposition-text">
-				The cat is 
-				<select  data-val="on">
-					<option>in</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the bed.
-				The train is 
-				<select  data-val="under">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the bed.
-				The book is 
-				<select data-val="on">
-					<option>in</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the table.
-				The skateboard is 
-				<select  data-val="under">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the table.
-				The rabbit is 
-				<select  data-val="in">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the armchair.
-				The cloцn is
-				<select data-val="on">
-					<option>near</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 			
-				the shelf and 
-				<select data-val="above">
-					<option>near</option>
-					<option>above</option>
-					<option>under</option>
-				</select> 
-				the table.
-				The bed is 
-				<select data-val="on">
-					<option>in</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the carpet.
-				The chair is 
-				<select data-val="near">
-					<option>above</option>
-					<option>in front of</option>
-					<option>near</option>
-				</select> 
-				the table.
-				The dog is 
-				<select  data-val="in">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the cupboard.
-				The door is 
-				<select data-val="in front of">
-					<option>above</option>
-					<option>in front of</option>
-					<option>near</option>
-				</select> 
-				the table.
-				The lamp is 
-				<select data-val="on">
-					<option>in</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the table.
-				The picture is 
-				<select  data-val="on">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the wall.
-				The umbrella is 
-				<select data-val="on">
-					<option>above</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the bed.
-				The ball is 
-				<select data-val="in">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the box.
-				The cup is 
-				<select data-val="under">
-					<option>on</option>
-					<option>above</option>
-					<option>under</option>
-				</select> 
-				the chair.
-				The drum (барабан) is 
-				<select data-val="near">
-					<option>next to</option>
-					<option>near</option>
-					<option>under</option>
-				</select> 
-				the chair.
-				The armchair is 
-				<select  data-val="next to">
-					<option>on</option>
-					<option>next to</option>
-					<option>under</option>
-				</select> 
-				the door.
-				The fish is 
-				<select data-val="in">
-					<option>above</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the aquarium.
-				The boy is 
-				<select data-val="near">
-					<option>above</option>
-					<option>near</option>
-					<option>next to</option>
-				</select> 
-				the table.
-				The car is 
-				<select data-val="in">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the cupboard.
-				The ruler is 
-				<select data-val="under">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select>
-				the cupboard.
-				The flag is 
-				<select data-val="in">
-					<option>next to</option>
-					<option>in</option>
-					<option>on</option>
-				</select> 
-				the bear's hand.
-				The cat sleeps
-				<select  data-val="on">
-					<option>in</option>
-					<option>above</option>
-					<option>on</option>
-				</select> 
-				the pillow (подушка).
-				The vase is 
-				<select  data-val="on">
-					<option>in</option>
-					<option>above</option>
-					<option>on</option>
-				</select> 
-				the shelf (полка).
-				The table is 
-				<select  data-val="above">
-					<option>on</option>
-					<option>above</option>
-					<option>under</option>
-				</select> 
-				the skateboard.
-				The star is 
-				<select data-val="on">
-					<option>in</option>
-					<option>on</option>
-					<option>under</option>
-				</select> 
-				the bed.
-				The giraffe is 
-				<select data-val="in">
-					<option>on</option>
-					<option>in</option>
-					<option>under</option>
-				</select> 
-				the box.
-			</div>
-			<button id="button-select" class="button-check" type="submit"></button>
-		</div>
-		<div class="container tabcontent " id="Prepositions">
-			<h3>Prepositions</h3>
-			<div class="prepositions-wrapp">
-				<div class="drag-drop" id='prepositions'>
-					<div class="drop" id="drop401" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="1">
-						<div class="preposition-item">in</div>
-					</div>
-					<div class="drop" id="drop402" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="2">
-						<div class="preposition-item">on</div>
-					</div>
-					<div class="drop" id="drop403" ondrop="drop(event)" ondragover="allowDrop(event)" data-id="3">
-						<div class="preposition-item">at</div>
-					</div>
-				</div>
-				<div class="dd_buttons">
-					<button class="drag" id="drag401" draggable="true" data-id="1" ondragstart="drag(event)">the morning (ранок)</button>
-					<button class="drag" id="drag402" draggable="true" data-id="1" ondragstart="drag(event)">the afternoong (день)</button>
-					<button class="drag" id="drag403" draggable="true" data-id="2" ondragstart="drag(event)">my birthday (мій день народження)</button>
-					<button class="drag" id="drag404" draggable="true" data-id="2" ondragstart="drag(event)">a holiday (канікули)</button>
-					<button class="drag" id="drag405" draggable="true" data-id="2" ondragstart="drag(event)">May 5 (5 Травня)</button>
-					<button class="drag" id="drag406" draggable="true" data-id="1" ondragstart="drag(event)">the evening (вечір)</button>
-					<button class="drag" id="drag407" draggable="true" data-id="1" ondragstart="drag(event)">February (Лютий)</button>
-					<button class="drag" id="drag408" draggable="true" data-id="2" ondragstart="drag(event)">Tuesday evening (Вівторок ввечір)</button>
-					<button class="drag" id="drag409" draggable="true" data-id="2" ondragstart="drag(event)">Wednesday afternoong (Середа день)</button>
-					<button class="drag" id="drag410" draggable="true" data-id="1" ondragstart="drag(event)">the summer (літо)</button>
-					<button class="drag" id="drag412" draggable="true" data-id="3" ondragstart="drag(event)">noon/midday (полудень)</button>
-					<button class="drag" id="drag414" draggable="true" data-id="3" ondragstart="drag(event)">bedtime (перед сном)</button>
-					<button class="drag" id="drag415" draggable="true" data-id="1" ondragstart="drag(event)">the fall/autumn</button>
-					<button class="drag" id="drag416" draggable="true" data-id="1" ondragstart="drag(event)">the winter (зима)</button>				
-					<button class="drag" id="drag417" draggable="true" data-id="2" ondragstart="drag(event)">Sunday (Неділя)</button>
-					<button class="drag" id="drag418" draggable="true" data-id="2" ondragstart="drag(event)">Monday morning (Понеділок ранок)</button>
-					<button class="drag" id="drag420" draggable="true" data-id="2" ondragstart="drag(event)">a weekday (будень)</button>
-					<button class="drag" id="drag421" draggable="true" data-id="3" ondragstart="drag(event)">night (ніч)</button>
-					<button class="drag" id="drag422" draggable="true" data-id="3" ondragstart="drag(event)">10 o'clock</button>					
-					<button class="drag" id="drag423" draggable="true" data-id="3" ondragstart="drag(event)">sunrise (схід сонця)</button>
-					<button class="drag" id="drag424" draggable="true" data-id="3" ondragstart="drag(event)">sunset (захід сонця)</button>
-					<button class="drag" id="drag425" draggable="true" data-id="3" ondragstart="drag(event)">midnight (опівночі)</button>
-					<button class="drag" id="drag426" draggable="true" data-id="1" ondragstart="drag(event)">2018</button>
-					<button class="drag" id="drag427" draggable="true" data-id="1" ondragstart="drag(event)">the 1990s</button>
-
-				</div>
-			</div>
-		</div>
-		<div class="container tabcontent " id="Tick">
-			<h3>Tick the correct sentence</h3>
-			<div class="sentence-wrapp tick-checkbox">
-
-			</div>
-			<button id="button-tick" class="button-check" type="submit"></button>
-			<button id="new-tick" class="button-new" type="button"></button>
-		</div>
-
-		<div class="container tabcontent " id="Complete">
-			<h3>Look and complete</h3>
-			<div class="sentence-wrapp complete-text">
-				<div class="drag-drop_text" id="drag-drop_text">
-				</div>
-				<div class="drag-drop_text-buttons">
-				</div>
-			</div>
-			<button id="new-text" class="button-new" type="button"></button>
-		</div>
-
-
-		<div class="container tabcontent " id="Verbs">
-			<h3>Irregular Verbs</h3>
-			<div class="verbs-wrap">
-				<form id="form-verbs">
-					<div id="verb-translation"></div>
-					<div class="verbs-holder">
-						<input id="form1" type="text" class="input-verbs" autocomplete="off" />
-						<input id="form2" type="text" class="input-verbs" autocomplete="off" />
-						<input id="form3" type="text" class="input-verbs" autocomplete="off" />
-						<div class="verb-result"></div>
-					</div>
-						<button id="button-verb-submit" class="button-check" type="submit"></button>
-
-						<button id="button-verb" class="button-new" type="button"></button>
-						<button id="button-verb-speak" class="button-speak" type="button"></button>
-
-				</form>
-			</div>			
-		</div>
-	</div>
 
 	</main>
 	
 	
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src='js/voice.js'></script>
-	<script src="js/drop/j/dropMe.js"></script>
-	<script src="js/letters.js"></script>s
-	<script src="js/match.js"></script>
+	<script src="js/prepositions.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/script.js"></script>
 </body>

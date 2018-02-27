@@ -5,11 +5,11 @@
 }
 main {
 	background-size: 110px auto;
-	padding-top: 70px;
+	padding-top: 30px;
 }
 .page-content{
-	width: 50%;
-	min-width: 900px;
+	width: 1100px;
+	min-width: 1100px;
 	margin: 0 auto;
 	height: 100%;
 	font-size: 13px;
@@ -732,5 +732,17 @@ input[type="checkbox"] {
 }
 .navigation:hover {
 	display: block;
-	height: 100%;
+	height: auto;
+}
+.navigation li a{
+	font-family: 'Carter One', cursive;
+	font-size: 16px;
+	font-weight: 600;
+	color: #63afbd;
+}
+.navigation li a:hover{
+	font-family: 'Carter One', cursive;
+	font-size: 16px;
+	font-weight: 600;
+	color: #aa283f;
 }
