@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>English</title>
+	
+	<link rel="stylesheet" href="js/drop/c/default.css" />
+	<link rel="stylesheet" href="js/drop/c/dropMe.css" />
+	<link rel="stylesheet" href="style/styles.css" />
+	<link rel="shortcut icon" type="image/png" href="./image/favicon.ico"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body class="sound">
+	<main>
+		<img class="top-img" src="image/panda.png">
+		<button id="button-sound" class="button-sound" type="button"></button>
+		<div class="tabs">
+			<button class="tablinks active" onclick="openTab(event, 'Sentences')">Make a sentence</button>
+			<button class="tablinks" onclick="openTab(event, 'Dialog')">Make a dialog</button>
+			<button class="tablinks" onclick="openTab(event, 'Fill')">Fill the Gaps</button>
+			<button class="tablinks" onclick="openTab(event, 'Tick')">Tick the correct</button>
+		</div>
+		<div class="page-content">
+
+		
+		<div class="container tabcontent active" id="Sentences">
+			<h3>Make the sentence</h3>
+			<ul class="dropme grid">
+			</ul>
+			<button id="button-check" class="button-check" type="button"></button>
+			<button id="button-sentence" class="button-new" type="button"></button>
+			<br>
+			<button id="button-translation"  class="answer" type="button">Show Translation</button>
+			<span id="translation"></span>
+		</div>
+		<div class="container tabcontent " id="Dialog">
+			<h3>Match</h3>
+			<button id="button-pairs1" class="button-newset" type="button">New Set</button>
+			<div class="container" id='questions1'>
+			</div>
+
+		</div>
+		<div class="container tabcontent " id="Fill">
+			<h3>Fill the gaps</h3>
+			<div class="fill-gaps">
+				<div class="drag-drop" id="drag-drop">
+				</div>
+				<div class="drag-drop_buttons">
+				</div>
+			</div>
+			<button id="button-fill" class="button-newset" type="button">New Set</button>
+		</div>
+		
+		<div class="container tabcontent " id="Tick">
+			<h3>Tick the correct sentence</h3>
+			<div class="sentence-wrapp tick-checkbox">
+
+			</div>
+			<button id="button-tick" class="button-check" type="submit"></button>
+			<button id="new-tick" class="button-new" type="button"></button>
+		</div>		
+	</div>
+
+	</main>
+	
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src='js/voice.js'></script>
+	<script src="js/drop/j/dropMe.js"></script>
+	<script src="js/match.js"></script>
+	<script src="js/data/can.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/grammar.js"></script>
+</body>
+</html>

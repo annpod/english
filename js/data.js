@@ -205,7 +205,7 @@ var dragDrop = [
 		{first: "Let's",drop:"play",last:"games."},
 		{first: "I don't like",drop:"playing",last:"football."},
 		{first: "I like",drop:"ridding",last:"a bike."},
-	]*/
+	],
 	[
 		{first: "I can",drop:"make",last:"airplanes."},
 		{first: "I want to",drop:"eat",last:"a sandwich."},
@@ -214,6 +214,17 @@ var dragDrop = [
 		{first: "Let's",drop:"make",last:"masks."},
 		{first: "Let's",drop:"cook",last:"a cake."},
 		{first: "Would you like to",drop:"drink",last:"a cup of tea?"},
+	],*/
+	[
+		{first: "I am",drop:"making",last:"airplanes."},
+		{first: "I am",drop:"cooking",last:"a sandwich."},
+		{first: "I am",drop:"eating",last:"my breakfast."},
+		{first: "She is",drop:"drinking",last:"water."},
+		{first: "He is",drop:"cooking",last:"a hamburger."},
+		{first: "He is",drop:"cooking",last:"toasts."},
+		{first: "He is",drop:"swimming",last:"in swimming pool."},
+		{first: "He is",drop:"writing",last:"a letter."},
+		{first: "She is",drop:"cleaning",last:"her teeth."},
 	]
 ]
 

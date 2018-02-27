@@ -4,7 +4,7 @@ $(document).ready(function() {
 		translation,		
 		language;
 	var i = 0;
-	var arr = arrays[0];
+	/*var arr = arrays[0] || [];*/
 	var questions = [];
 	var answers = [];
 	var navigation = $('#button-home');
