@@ -435,13 +435,13 @@ button+button{margin-left: 10px;}
 }
 #family .drop{
 	height: 27px;
-	width: 77px;
+	width: 70px;
 	position: absolute;
 	padding: 0;
 }
 #family{
-	height: 850px;
-	width: 710px;
+	height: 750px;
+	width: 632px;
 	background: url("../image/family1.png") no-repeat;
 	background-size: cover;
 	position: relative;
@@ -450,72 +450,124 @@ button+button{margin-left: 10px;}
 }
 #family #drop101{
 	top: -3px;
-	left: 10px;
+	left: -5px;
 }
 #family #drop102{
-	top: 85px;
-	left: 324px;
+	top: 62px;
+    left: 265px;
 }
 #family #drop103{
 	top: 12px;
-	left: 578px;
+	left: 517px;
 }
 #family #drop104{
-	top: 198px;
+	top: 169px;
 	left: 33px;
 }
 #family #drop105{
-	top: 169px;
-	left: 185px;
+	top: 148px;
+    left: 158px;
 }
 #family #drop106{
-	top: 211px;
-	left: 292px;
+	top: 175px;
+    left: 263px;
 }
 #family #drop107{
-	top: 219px;
-	left: 431px;
+	top: 191px;
+    left: 378px;
 }
 #family #drop108{
-	top: 235px;
-	left: 519px;
+	top: 200px;
+    left: 466px;
 }
 #family #drop109{
-	top: 228px;
-	left: 615px;
+	top: 200px;
+   left: 540px;
 }
-#family v#drop110{
-	top: 236px;
-	left: 377px;
-}
-#family #drop111{
-	top: 408px;
+#family #drop110{
+	top: 355px;
 	left: 34px;
 	width: 130px;
 }
+#family #drop111{
+	top: 360px;
+    left: 200px;
+}
 #family #drop112{
-	top: 397px;
-	left: 177px;
+	top: 361px;
+    left: 297px;
 }
 #family #drop113{
-	top: 401px;
-	left: 315px;
+	left: 310px;
+    top: 680px;
 }
 #family #drop114{
-	top: 433px;
-	left: 369px;
+	top: 574px;
+    left: 341px;
 }
 #family #drop115{
-	top: 406px;
-	left: 455px;
+	 top: 543px;
+    left: 427px;
 }
 #family #drop116{
-	top: 411px;
-	left: 567px;
+    top: 557px;
+    left: -6px;
 }
 #family #drop117{
-	top: 634px;
-	left: 0;
+	top: 611px;
+    left: 65px;
+}
+#family #drop118{
+	top: 703px;
+    left: 99px;
+}
+#family #drop119{
+    top: 563px;
+    left: 104px;
+}
+#family #drop120{
+	top: 611px;
+    left: 274px;
+}
+#family #drop121{
+	top: 355px;
+    left: 450px;
+}
+#family #drop122{
+	top: 404px;
+    left: 540px;
+}
+#family #drop123{
+	    top: 474px;
+    left: 365px;
+}
+#family #drop124{
+	    top: 379px;
+    left: 368px;
+}
+#family #drop125{
+	    top: 504px;
+    left: 531px;
+}
+#family #drop126{
+	    top: 560px;
+    left: 506px;
+}
+#family #drop127{
+	    top: 415px;
+    left: 169px;
+}
+#family #drop128{
+	    top: 512px;
+    left: 357px;
+}
+#family #drop129{
+	    top: 646px;
+    left: 321px;
+}
+#family #drop130{
+	    top: 592px;
+    left: 516px;
 }
 .dd_buttons {
 	flex-direction: row;
