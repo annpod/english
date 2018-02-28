@@ -352,71 +352,71 @@ button+button{margin-left: 10px;}
 	position: absolute;
 	padding: 0;
 }
-#drop101{
+#body #drop101{
 	top: 20px;
 	left: 22px;
 }
-#drop102{
+#body #drop102{
 	top: 70px;
 	left: 17px;
 }
-#drop103{
+#body #drop103{
 	top: 159px;
 	left: 12px;
 }
-#drop104{
+#body #drop104{
 	top: 203px;
 	left: 33px;
 }
-#drop105{
+#body #drop105{
 	top: 245px;
 	left: -4px;
 }
-#drop106{
+#body #drop106{
 	top: 291px;
 	left: 7px;
 }
-#drop107{
+#body #drop107{
 	top: 369px;
 	left: 22px;
 }
-#drop108{
+#body #drop108{
 	top: 404px;
 	left: 269px;
 }
-#drop109{
+#body #drop109{
 	top: 366px;
 	left: 277px;
 }
-#drop110{
+#body #drop110{
 	top: 236px;
 	left: 377px;
 }
-#drop111{
+#body #drop111{
 	top: 330px;
 	left: 277px;
 }
-#drop112{
+#body #drop112{
 	top: 260px;
 	left: 260px;
 }
-#drop113{
+#body #drop113{
 	top: 221px;
 	left: 263px;
 }
-#drop114{
+#body #drop114{
 	top: 168px;
 	left: 284px;
 }
-#drop115{
+#body #drop115{
 	top: 130px;
 	left: 278px;
 }
-#drop116{
+#body #drop116{
 	top: 83px;
 	left: 287px;
 }
-#drop117{
+#body #drop117{
 	top: 2px;
 	left: 269px;
 }
@@ -425,6 +425,97 @@ button+button{margin-left: 10px;}
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
+}
+/*family*/
+.family-wrapp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+#family .drop{
+	height: 27px;
+	width: 77px;
+	position: absolute;
+	padding: 0;
+}
+#family{
+	height: 850px;
+	width: 710px;
+	background: url("../image/family1.png") no-repeat;
+	background-size: cover;
+	position: relative;
+	margin-bottom: 30px;
+	border: 2px solid #ccc;
+}
+#family #drop101{
+	top: -3px;
+	left: 10px;
+}
+#family #drop102{
+	top: 85px;
+	left: 324px;
+}
+#family #drop103{
+	top: 12px;
+	left: 578px;
+}
+#family #drop104{
+	top: 198px;
+	left: 33px;
+}
+#family #drop105{
+	top: 169px;
+	left: 185px;
+}
+#family #drop106{
+	top: 211px;
+	left: 292px;
+}
+#family #drop107{
+	top: 219px;
+	left: 431px;
+}
+#family #drop108{
+	top: 235px;
+	left: 519px;
+}
+#family #drop109{
+	top: 228px;
+	left: 615px;
+}
+#family v#drop110{
+	top: 236px;
+	left: 377px;
+}
+#family #drop111{
+	top: 408px;
+	left: 34px;
+	width: 130px;
+}
+#family #drop112{
+	top: 397px;
+	left: 177px;
+}
+#family #drop113{
+	top: 401px;
+	left: 315px;
+}
+#family #drop114{
+	top: 433px;
+	left: 369px;
+}
+#family #drop115{
+	top: 406px;
+	left: 455px;
+}
+#family #drop116{
+	top: 411px;
+	left: 567px;
+}
+#family #drop117{
+	top: 634px;
+	left: 0;
 }
 .dd_buttons {
 	flex-direction: row;
@@ -758,6 +849,16 @@ input[type="checkbox"] {
 	font-size: 16px;
 	font-weight: 600;
 	color: #aa283f;
+}
+.sub-nav {
+	list-stile: none;
+	padding-left: 15px;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s all;
+}
+.nav-item:hover .sub-nav {
+	height: auto;
 }
 /**/
 .nav-item#can-nav {
